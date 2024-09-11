@@ -4,11 +4,11 @@ import cv2
 import numpy as np
 
 # Image path for the field.jpg given in the Lab 01 folder
-image_path = "C:\\Users\\Rajvir\\OneDrive\\Documents\\y4s4\\csi4133\\lab_01\\field.jpg"
+image_path = "field.jpg"
 
 # Read in the image into a variable to be used for other cv2 functions
 read_img = cv2.imread(image_path)
-write_img = cv2.imwrite("C:\\Users\\Rajvir\\OneDrive\\Documents\\y4s4\\csi4133\\lab_01\\copy_of_original.png", read_img)
+write_img = cv2.imwrite("copy_of_original.png", read_img)
 
 # Show the original image to the user for ~8 seconds
 show_img = cv2.imshow("Original image", read_img)
@@ -46,8 +46,8 @@ quantized_img = res.reshape((read_img.shape))
 cv2.imshow('Quantized Image', quantized_img)
 cv2.waitKey(7000)
 
-write_img = cv2.imwrite("C:\\Users\\Rajvir\\OneDrive\\Documents\\y4s4\\csi4133\\lab_01\\downsized.jpg", downsize_img)
-write_img = cv2.imwrite("C:\\Users\\Rajvir\\OneDrive\\Documents\\y4s4\\csi4133\\lab_01\\quantized.jpg", quantized_img)
+write_img = cv2.imwrite("downsized.jpg", downsize_img)
+write_img = cv2.imwrite("quantized.jpg", quantized_img)
 
 # Close all windows (original, downsized and quantized windows)
 cv2.destroyAllWindows()
