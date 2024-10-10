@@ -1,0 +1,112 @@
+topics - csi4133 - 10 Questions, few multiple choice, open-ended (writing and explanation, some are just asking why, calculations will be similar to what's seen in class)
+
+03 and 04 are where I need practice / clarification
+
+03 - Image Capture:
+
+focal length, object distance, image distance
+
+f-number (related to focal length)
+
+aperture (opening size of the lens)
+
+FOV
+
+pin-hole camera model slide is good for understanding
+
+knowing relations between these is important and can be asked calculation questions
+
+1/f = 1/u + 1/v, where f is focal length, u is object distance, v is image distance
+magnification = m = image_size / object_size = v / u, m = f / (u - f)
+
+f = uv / (u+v)
+
+pixel resolution - Image Capture - slide 25 for the question
+
+depth of field - which factors affect it (aperture size, focal length, distance to subject)
+
+optical distortions (barrel, pincushion, etc)
+
+how focal length affects perspective
+
+sampling and digitization
+
+aliasing - undersampled image, moire pattern
+
+04 - Color:
+
+trichromatic coefficients, tristimulus
+
+x = X / (X+Y+Z)
+(x + y + z) = 1
+
+conversion from XYZ to RGB
+
+normalize RGB by 255 (say R = 120, R = 120/255 should be what's plotted in the multiplication)
+
+To what RGB color 
+corresponds the coordinate 
+x=0.3, y=0.2?
+
+To what x and y color 
+corresponds to the R=40 
+G=100 B=100?
+
+05 - Image Enhancement:
+
+histogram processing (*) - slide 17 review this
+
+how to do histogram equalization - slide 22
+
+given matrix of image / gray-level values, draw a histogram (# of occurrences of each level), or a table with each level in the first column, and # of occurrences in the next column, third column (called Sk) being its probability, and last one adding each probability (first one will be same as first probability, last one will be 100%), last column is rounding each Sk to its nearest integer. Probability of occurrence is # of occurrence / total # of pixels check around slide 38 for example
+
+06 - Spatial Filtering - Smoothing:
+
+linear filters (given matrices, which one is smoothing - the one with no negatives)
+how do you apply these smoothing filters ?
+convolution - ask gpt if needed to understand more
+box filters, gaussian kernels
+
+mean v median when applying filters, which one is replacing the center pixel
+
+salt-and-pepper noise, why ?
+
+07 - Spatial Filtering - Sharpening:
+
+Laplacian - first and second derivatives
+
+edge detection
+
+canny edge detector - how does it works - parameters
+
+Sigma, high and low thresholds - changing these does what, no computation all understanding
+
+08 - Math Morphology:
+
+structuring elements
+
+adjacency matrices
+
+erosion, dilation, duality of them
+
+opening - smooths contour of an object
+closing - see slides ~30
+
+see how these structuring elements affect the images by opening and closing
+
+Hit-or-Miss transform (HMT) - using two structuring elements
+B1 should be within the image, B2 should be outside of it
+slide 36
+
+boundary extraction - boundary of image A is A - (A eroded by Structure Element B)
+
+opening then closing can be used to eliminate 'salt and pepper' noise
+
+hole filling
+
+
+
+
+
+
+
